@@ -1,0 +1,37 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'war'
+}
+
+group = 'com.example.springboot'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+tasks.test.outputs.cacheIf { true }
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.webjars:bootstrap:4.5.3'
+	implementation 'org.webjars:react:16.5.2'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+
