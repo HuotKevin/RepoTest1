@@ -49,9 +49,5 @@ public class DemoApplication {
 			return 0;
 		}
 		return res;
-
-
-
 	}
-
 }
