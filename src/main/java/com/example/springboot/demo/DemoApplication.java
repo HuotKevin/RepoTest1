@@ -11,43 +11,21 @@ public class DemoApplication {
 	}
 
 	public double sommePositive(double a, double b){
-		double res=a+b;
-		if(res==0){
-			if(res==-1){
-				if(res==-2){
-					if(res==-3){
-						if(res==-4){
-							if(res==-5){
-								if(res==-6){
-									if(res==-7){
-										if(res==-8){
-											if(res==-9){
-												if(res==-10){
-													if(res==-11){
-														return -12;
-													}
-													return 0;
-												}
-												return 0;
-											}
-											return 0;
-										}
-										return 0;
-									}
-									return 0;
-								}
-								return 0;
-							}
-							return 0;
-						}
-						return 0;
-					}
-					return 0;
-				}
+		if(a==0){
+			if(b==0){
 				return 0;
 			}
-			return 0;
+			else{
+				return b;
+			}
 		}
-		return res;
+		else{
+			if(b==0){
+				return 0;
+			}
+			else{
+				return a+b;
+			}
+		}
 	}
 }
